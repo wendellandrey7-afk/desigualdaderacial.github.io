@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Análise_Visual</title>
+    <link rel="icon" type="image/png" href="icon_nassau.png">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.jsdelivr.net/npm/vega@6.2.0"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vega-lite@6.4.3"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vega-embed@7.1.0"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vega@5"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vega-lite@5"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vega-lite-api@5.6.0"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vega-embed@6"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vega@6"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vega-lite@6"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vega-embed@7"></script>
+</head> 
+<body>
+    <!--Botao alternar modo-->
+    
+    <button id="theme-toggle" class="theme-btn">🌓 Alternar Modo</button>
+
+    <div class="site-wrapper">
+        <button onclick="scrollToTop()" id="backToTop" class="btn-top">↑</button>
+        <!-- CABEÇALHO DA PÁGINA -->
+
+        <header class="main-header">
+            <div class="brand-tag">Análise Visual</div>
+            <h1>Desigualdade Racial e Socioeconômica no Brasil 2012 - 2018 </h1>
+            <p class="lead">Uma investigação orientada a dados sobre o impacto dos fatores socioeconômicos e raciais nas estruturas de vulnerabilidade no Brasil.</p>
+            <!--COLABORADORES -->
+            
+            <div class="team-box ">
+                <span class="meta-label">Colaboradores</span>
+                <p class="names">Wendell - <a style="color: #7b2bfb;" href="https://github.com/wendellandrey7-afk" target="_blank">GitHub</a> <br>
+                    Matheus - <a style="color: #7b2bfb;" href="https://github.com/MatheusAlex26" target="_blank">GitHub</a><br>
+                    Ricardo - <a style="color: #7b2bfb;" href="https://github.com/ricardoandradesouza7-oss" target="_blank">GitHub</a><br>
+                    Arthur - <a style="color: #7b2bfb;" href="https://github.com/artzzzzzzzz" target="_blank">GitHub</a><br>
+
+                </p>
+            </div>
+            
+        </header>
+        <!-- GRÁFICOS E DESCRIÇÃO -->
+        <main class="content-stream">
+            <article class="data-story">
+                <div class="story-info">
+                    <div class="story-header">
+                        <span class="section-number">01</span>
+                        <h2>Índice Médio de Desigualdade por Região</h2>
+                    </div>
+                    <p class="story-text">O gráfico compara o rendimento médio no mercado formal entre os grupos étnicos.</p>
+                </div>
+                <div class="container-grafico">
+                    <div id="grafico01">
+                        <script type="text/javascript" src="grafico01.js"></script>
+                    </div>
+                </div>
+                <h3>Conclusão: </h3>
+                <p class="story-text">Há uma disparidade evidente onde a população autodeclarada branca possui uma média salarial sensivelmente maior e isso evidencia traços de desigualdade estrutural no acesso a cargos de melhor remuneração ou diferenças de oportunidades na progressão de carreira no mercado formal.</p>
+            </article>
+
+            <article class="data-story">
+                <div class="story-info">
+                    <div class="story-header">
+                        <span class="section-number">02</span>
+                        <h2>Média da taxa de homicídios</h2>
+                    </div>
+                    <p class="story-text">O gráfico apresenta a mediana da taxa de homicídios entre os anos de 2012 e 2018. </p>
+                </div>
+                <div class="container-grafico">
+                    <div id="grafico02">
+                        <script type="text/javascript" src="grafico02.js"></script>
+                    </div>
+                </div>
+                <h3>Conclusão: </h3>
+                <p class="story-text">Observa-se uma tendência de crescimento entre 2012 e 2016, período em que o indicador atingiu seu maior valor. Após esse pico, verifica-se uma redução gradual nos anos seguintes, com queda mais acentuada em 2018. Essa variação sugere mudanças nas condições de segurança pública ao longo do período analisado, refletindo fatores sociais, econômicos e institucionais que influenciam os índices de violência.</p>
+            </article>
+            <article class="data-story">
+                <div class="story-info">
+                    <div class="story-header">
+                        <span class="section-number">03</span>
+                        <h2>Taxa Média de Desocupação por Região do Brasil</h2>
+                    </div>
+                    <p class="story-text">O gráfico apresenta a taxa média de desocupação nas cinco regiões brasileiras.</p>
+                </div>
+                <div class="container-grafico">
+                    <div id="grafico03">
+                        <script type="text/javascript" src="grafico03.js"></script>
+                    </div>
+                </div>
+                <h3>Conclusão: </h3>
+                <p class="story-text">Observa-se que o Nordeste registra o maior índice de desocupação, indicando maiores dificuldades de inserção da população no mercado de trabalho. As regiões Norte e Sudeste apresentam valores semelhantes e relativamente elevados, enquanto o Centro-Oeste possui uma taxa intermediária. A região Sul se destaca por apresentar o menor índice de desocupação entre todas as regiões analisadas.</p>
+            </article>
+
+            <article class="data-story">
+                <div class="story-info">
+                    <div class="story-header">
+                        <span class="section-number">04</span>
+                        <h2>Desigualdade Racial na Taxa de Desocupação</h2>
+                    </div>
+                    <p class="story-text">O gráfico apresenta a evolução da taxa média de desocupação entre pessoas brancas e pretas no período de 2012 a 2018.</p>
+                </div>
+                <div class="container-grafico">
+                    <div id="grafico04">
+                        <script type="text/javascript" src="grafico04.js"></script>
+                    </div>
+                </div>
+                <h3>Conclusão: </h3>
+                <p class="story-text">Em todos os anos analisados, a população preta apresentou taxas de desocupação superiores às da população branca, evidenciando desigualdades persistentes no acesso ao mercado de trabalho. Observa-se que ambas as curvas apresentam crescimento a partir de 2015, com aumento mais acentuado entre 2015 e 2017.</p>
+            </article>
+
+            <article class="data-story">
+                <div class="story-info">
+                    <div class="story-header">
+                        <span class="section-number">05</span>
+                        <h2>Taxa Média de Desocupação por Região e Etnia</h2>
+                    </div>
+                    <p class="story-text">O gráfico compara a taxa média de desocupação entre pessoas brancas e pretas nas diferentes regiões do Brasil.</p>
+                </div>
+                <div class="container-grafico">
+                    <div id="grafico05">
+                        <script type="text/javascript" src="grafico05.js"></script>
+                    </div>
+                </div>
+                <h3>Conclusão: </h3>
+                <p class="story-text">Em todas as regiões analisadas, a população preta apresenta índices de desocupação superiores aos da população branca, evidenciando desigualdades raciais no acesso ao mercado de trabalho. O Nordeste e o Sudeste registram algumas das maiores taxas de desocupação, especialmente entre a população preta, enquanto a região Sul apresenta os menores índices para ambos os grupos.</p>
+            </article>
+            <article class="data-story">
+                <div class="story-info">
+                    <div class="story-header">
+                        <span class="section-number">06</span>
+                        <h2>Mapa de Calor da Desigualdade de Renda por Região e Grupo Étnico</h2>
+                    </div>
+                    <p class="story-text">O gráfico apresenta um mapa de calor da desigualdade de renda entre os grupos étnicos nas diferentes regiões do Brasil. As cores mais intensas indicam maiores níveis de desigualdade</p>
+                </div>
+                <div class="container-grafico">
+                    <div id="grafico06">
+                        <script type="text/javascript" src="grafico06.js"></script>
+                    </div>
+                </div>
+                <h3>Conclusão: </h3>
+                <p class="story-text">O Sudeste apresenta os maiores níveis de desigualdade para a população branca, seguido pelas regiões Centro-Oeste e Norte.</p>
+            </article>
+
+            <article class="data-story">
+                <div class="story-info">
+                    <div class="story-header">
+                        <span class="section-number">07</span>
+                        <h2>Evolução da Taxa Média de Subutilização da Força de Trabalho</h2>
+                    </div>
+                    <p class="story-text">O gráfico apresenta a evolução da taxa média de subutilização da força de trabalho entre os anos de 2012 e 2018.</p>
+                </div>
+                <div class="container-grafico">
+                    <div id="grafico07">
+                        <script type="text/javascript" src="grafico07.js"></script>
+                    </div>
+                </div>
+                <h3>Conclusão: </h3>
+                <p class="story-text">Houve uma redução gradual do indicador entre 2012 e 2014, seguida por um aumento contínuo a partir de 2015. O crescimento torna-se mais expressivo entre 2016 e 2018, período em que a taxa atinge seus maiores valores.Esse comportamento sugere um agravamento das dificuldades de inserção plena no mercado de trabalho, refletindo o aumento do número de pessoas desempregadas, subocupadas ou disponíveis para trabalhar, mas sem oportunidades adequadas.</p>
+            </article>
+
+            <article class="data-story">
+                <div class="story-info">
+                    <div class="story-header">
+                        <span class="section-number">08</span>
+                        <h2>Evolução do Índice Médio de Desigualdade por Região</h2>
+                    </div>
+                    <p class="story-text">O gráfico apresenta a evolução do índice médio de desigualdade nas cinco regiões brasileiras entre 2012 e 2018.</p>
+                </div>
+                <div class="container-grafico">
+                    <div id="grafico08">
+                        <script type="text/javascript" src="grafico08.js"></script>
+                    </div>
+                </div>
+                <h3>Conclusão: </h3>
+                <p class="story-text">Observa-se que os níveis de desigualdade permaneceram relativamente estáveis ao longo do período, com pequenas variações entre os anos e as regiões. As regiões Norte e Nordeste contribuíram com parcelas mais elevadas para o índice total, enquanto Centro-Oeste, Sudeste e Sul apresentaram valores mais moderados.</p>
+            </article>
+            <article class="data-story">
+                <div class="story-info">
+                    <div class="story-header">
+                        <span class="section-number">09</span>
+                        <h2>Renda Média Formal por Região do Brasil</h2>
+                    </div>
+                    <p class="story-text">O gráfico apresenta a renda média do trabalho formal nas diferentes regiões do Brasil.</p>
+                </div>
+                <div class="container-grafico">
+                    <div id="grafico09">
+                        <script type="text/javascript" src="grafico09.js"></script>
+                    </div>
+                </div>
+                <h3>Conclusão: </h3>
+                <p class="story-text">Observa-se que a região Centro-Oeste possui a maior renda média formal, superando as demais regiões analisadas. Em seguida aparecem as regiões Norte e Sudeste, com valores relativamente próximos entre si. As regiões Sul e Nordeste registram as menores médias de renda formal, sendo o Nordeste a região com o menor valor observado. Essas diferenças refletem desigualdades econômicas e estruturais entre as regiões brasileiras, evidenciando a concentração de melhores oportunidades de emprego e remuneração em determinadas áreas do país.</p>
+            </article>
+        </main>
+        <!-- Informações adicionais-->
+
+        <footer class="main-footer">
+            <div class="footer-sources">
+                <span class="meta-label">Bases de Dados Utilizadas</span>
+                <p>Gov.br</p>
+            </div>
+            <p class="copyright">Site desenvolvido para projeto acadêmico da disciplina de Back-end Frameworks • 30/05/2026</p>
+        </footer>
+    </div>
+</div>
+<script>
+    function scrollToTop() {
+        window.scrollTo({top: 0, behavior: 'smooth'});
+    }
+</script>
+]<script>
+    const toggleBtn = document.getElementById('theme-toggle');
+    toggleBtn.addEventListener('click', () => {
+        document.body.classList.toggle('light-theme');
+    });
+</script>
+</body>
+</html>
